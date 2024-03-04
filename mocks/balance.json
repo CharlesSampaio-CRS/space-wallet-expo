@@ -1,0 +1,55 @@
+{
+    "amount": 5767.937567191557,
+    "currency": "BRL",
+    "updated": "2024-03-04T14:15:04.852000",
+    "datetime": [
+        {
+            "symbol": "BRL",
+            "amount": 0.00912954,
+            "price": 0.0,
+            "exchange": "BINANCE_EXCHANGE",
+            "updated": "2024-03-04T14:15:00.809000",
+            "total": 0.0
+        },
+        {
+            "symbol": "BABYBONK",
+            "amount": 48064333035.076355,
+            "price": 1.5132903925389756e-10,
+            "exchange": "MEXC_EXCHANGE",
+            "updated": "2024-03-04T14:15:01.957000",
+            "total": 7.273529340577475
+        },
+        {
+            "symbol": "SHIB",
+            "amount": 23081466.535,
+            "price": 0.00016986,
+            "exchange": "NOVADAX_EXCHANGE",
+            "updated": "2024-03-04T14:15:03.237000",
+            "total": 3920.6179056350998
+        },
+        {
+            "symbol": "BABYDOGE",
+            "amount": 61982767348.37497,
+            "price": 1.22205e-08,
+            "exchange": "NOVADAX_EXCHANGE",
+            "updated": "2024-03-04T14:15:03.845000",
+            "total": 757.4604083808163
+        },
+        {
+            "symbol": "PEPE",
+            "amount": 26690849.88,
+            "price": 3.8682199999999994e-05,
+            "exchange": "NOVADAX_EXCHANGE",
+            "updated": "2024-03-04T14:15:04.214000",
+            "total": 1032.4607932281358
+        },
+        {
+            "symbol": "AIBB",
+            "amount": 19635275229.915,
+            "price": 2.5528e-09,
+            "exchange": "NOVADAX_EXCHANGE",
+            "updated": "2024-03-04T14:15:04.851000",
+            "total": 50.12493060692702
+        }
+    ]
+}
