@@ -20,6 +20,7 @@ const Home = () => { // Removi o async da arrow function
             'Authorization': `${access_token}`,
           },
         });
+           //const ...json balance.json - para teste. 
         setData(response.data);
       } catch (error) {
         console.error(error);
