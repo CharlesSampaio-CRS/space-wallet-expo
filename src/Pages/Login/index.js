@@ -1,39 +1,16 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Input, Button, Text } from 'react-native-elements';
-import axios from 'axios';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import AuthContext from '../../../App';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
 
-  const login = async () => {
-    const data = {
-      email,
-      password,
-    };
-  
-    try {
-        console.log(data)
-      const response = await axios.post('http://127.0.0.1:8000/public/login', data, {
-        headers: {
-          'accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-      });
+  const { signIn } = React.useContext(AuthContext);
 
-      const access_token = response.data.access_token
-      await AsyncStorage.setItem('access_token', access_token);
-      //console.log(await AsyncStorage.getItem('access_token'))
-      //await AsyncStorage.removeItem('access_token');
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <View style={styles.container}>
@@ -47,7 +24,7 @@ const Login = () => {
         keyboardType="email-address"
         autoCapitalize="none"
         value={email}
-        onChangeText={setEmail}
+        onChangeText={setUsername}
         containerStyle={styles.inputContainer}
       />
       <Input
@@ -59,7 +36,7 @@ const Login = () => {
         onChangeText={setPassword}
         containerStyle={styles.inputContainer}
       />
-      <Button title="Entrar" onPress={login} containerStyle={styles.buttonContainer} />
+      <Button title="Entrar"  onPress={() => signIn({ username, password })} containerStyle={styles.buttonContainer} />
     </View>
   );
 };
